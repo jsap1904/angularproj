@@ -19,12 +19,12 @@
   <div ng-controller="firstCtrl">
     <!-- <h1>{{ myName.toUpperCase() }}
     {{ 3 + 3 }}</h1> -->
-    <input class="form-control" ng-model="">
+    <input class="form-control" ng-model="search">
     <!-- <h1 ng-repeat=""> {{ data.docs }}</h1> -->
-    <button type="button" name="button" class="btn btn-danger" ng-click="searchApi(searh)" ng-disabled="!userSearch.length">Search</button>
+    <button type="button" name="button" class="btn btn-danger" ng-click="searchApi(search)">Search</button>
 
    <ul>
-      <li ng-repeat="articles in articles">{{ articles.response.docs }}</li>
+      <li ng-repeat="articles in articles">{{ articles.headline.main }} </li>
     </ul>
     <!-- <p ng-repeat="firstAttr in objArr">{{ firstAttr.location }}</p>  -->
 </div>

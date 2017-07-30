@@ -5,13 +5,15 @@ app.controller('firstCtrl', function($scope, $http) {
 //take in user input and feed to my api call
 	$scope.searchApi= function(search) {
 	
-	//ny times api
-	$http.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + search + '&api-key=c2bf515d46f3478ab0c62810e26b19ce').then(function(success){
+		//ny times api
+		$http.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + search + '&api-key=c2bf515d46f3478ab0c62810e26b19ce').then(function(success){
 
 		//console.log(success.data.response.docs);
 		//store array of objects in my scope variable
 		$scope.articles = success.data.response.docs
-	
+
+		});
+	};
 });
 
 
