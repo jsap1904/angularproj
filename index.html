@@ -16,7 +16,17 @@
 </head>
 
 <body ng-app="myApp">
-<div ng-controller="firstCtrl">
+  <div ng-controller="firstCtrl">
+    <!-- <h1>{{ myName.toUpperCase() }}
+    {{ 3 + 3 }}</h1> -->
+    <input class="form-control" ng-model="myName">
+    <h1> {{ myName }}</h1>
+    <button type="button" name="button" class="btn btn-danger" ng-click="logChanges(myName)"> Get Name</button>
+
+    <ul>
+      <li ng-repeat="name in nameArr">{{ name }}</li>
+    </ul>
+    <p ng-repeat="cats in dogs">{{ cats }}</p>
 </div>
 
 
